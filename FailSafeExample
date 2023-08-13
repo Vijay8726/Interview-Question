@@ -1,0 +1,22 @@
+import java.util.Iterator;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class FailSafeExample {
+
+    public static void main(String args[])
+    {
+        ConcurrentHashMap<String,String>  student=new ConcurrentHashMap<String,String>();
+        student.put("Vijay", "UP");
+        student.put("Ajay", "Delhi");
+        student.put("Rohit", "Hyderabad");
+        student.put("Ankit", "Banglore");
+
+        Iterator itr=student.keySet().iterator();
+        while(itr.hasNext())
+        {
+            System.out.println(student.get(itr.next()));
+            student.put("Rohan","Mumbai");
+        }
+
+    }
+}
