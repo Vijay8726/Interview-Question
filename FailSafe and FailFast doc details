@@ -1,0 +1,34 @@
+Question-2
+
+What is fail-safe and fail-fast iteration in java?
+
+Ex. ArrayLIst<Integer> list=Arrays.asList(11,2,3,4);
+
+1,2,3,4
+
+Iterator - The iterator in Java is used to traverse over a collection's objects. The collections return two types of iterators, either it will be Fail Fast or Fail Safe.
+
+ConcurrentModification - The Concurrent modification in Java is to modify an object concurrently while another task is running over it. In simple terms, concurrent modification is the process of modifying objects while another thread is running over them. It will change the structure of the data collection, either by removing, adding, or updating the value of the elements in the collection.
+
+In java there are two type of iterator - 
+
+1.Failfast 
+2.Failsafe
+
+
+Failfast - 
+
+-> If you are trying to modify during iteration time. It will occur      ConcurrentModification Exception. Code will be stopped.
+-> They are using original object 
+-> Ex- HashMap, ArrayList,Vector etc.
+-> It is Fast 
+-> They are not created any clone object
+-> They taken less memory 
+
+2. FailSafe -
+
+-> No any Exception will occur.
+-> You can modify the value during iteration time.
+-> They created copy of Collection Object.
+->They took more memory.
+
