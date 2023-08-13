@@ -1,0 +1,24 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class FailFastExample {
+
+    public static void main(String args[])
+    {
+        Map<String,String> student=new HashMap<String,String>();
+        student.put("Vijay", "UP");
+        student.put("Ajay", "Delhi");
+        student.put("Rohit", "Hyderabad");
+        student.put("Ankit", "Banglore");
+
+        Iterator itr=student.keySet().iterator();
+
+        while(itr.hasNext())
+        {
+            System.out.println(student.get(itr.next()));
+            student.put("Sanjay","Pune");
+
+        }
+    }
+}
